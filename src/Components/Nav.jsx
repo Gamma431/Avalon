@@ -1,20 +1,46 @@
-export default function Nav() {
-  return (
-    <div className="w-full h-[10vh] text-white flex items-center justify-between px-[2%] py-[0.8%] backdrop-blur-sm fixed top-0 left-0 z-50">
-      <div className="w-[10%] h-full flex items-center justify-start rounded-[150px] ">
-        <img src="public/Img/high-resolution-color-logo(3).png" alt="Logo"  className="h-full "/>
+  import { Link } from "react-router-dom"
+
+
+  export default function Nav() {
+    return (
+      <div className="w-full h-[10vh] flex mb-[1%] backdrop-blur-sm">
+        <div className="w-[10%] h-full">
+          <img src="public/Img/high-resolution-color-logo(3).png" alt="Avalon" className="h-full"/>
+        </div>
+        <div className="w-[60%] h-full flex items-center justify-evenly">
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">Home</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">Service</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">About</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">Order Pc</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">Products</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">News</Link>
+          <Link className="text-[25px] text-shadow-lg text-shadow-gray-400 hover:text-[#9deac6] hover:scale-[1.3] ease-in-out duration-100">Pc-industry</Link>
+        </div>
+        <div className="w-[30%] h-full flex items-center justify-end">
+          <div className="w-[50%] h-full flex items-center justify-evenly ">
+            <button className="w-full h-[50%] bg-gray-900 rounded-full text-white shadow-lg shadow-gray-400">Login</button>
+
+
+
+            <div className="hidden w-full h-full flex items-center justify-evenly">
+              <button className="w-[36%] h-full border rounded-full bg-gray-800 text-white">
+              <img src="" alt="User" />
+              </button>
+              <p>User</p>
+            </div>
+          </div>
+          <div className="w-[40%] h-full flex items-center justify-center gap-[4%]">
+            <button className="h-full">
+              <img src="public/Icons/icons8-bag-96.png" alt="Menu" className="w-full h-[50%] "/>
+            </button>
+            <button className="h-full">
+              <img src="public/Icons/icons8-heart-100.png" alt="Menu" className="w-full h-[50%] "/>
+            </button>
+            <button className="h-full">
+              <img src="public/Icons/icons8-menu(1).svg" alt="Menu" className="w-full h-[50%] "/>
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="w-[60%] h-full  flex items-center justify-center rounded-[150px] bg-gradient-to-r from-[#9deac6] to-[#A8F8FF] shadow-lg shadow-gray-400 border border-gray-400">
-        <ul className="w-full h-full flex items-center justify-around text-lg font-semibold">
-          <li className="hover:text-gray-700 cursor-pointer transition duration-300">Home</li>
-          <li className="hover:text-gray-700 cursor-pointer transition duration-300">About</li>
-          <li className="hover:text-gray-700 cursor-pointer transition duration-300">Services</li>
-          <li className="hover:text-gray-700 cursor-pointer transition duration-300">Contact</li>
-        </ul>
-      </div>
-      <div className="w-[10%] h-full flex items-center justify-end rounded-[150px]  bg-gradient-to-r from-[#9deac6] to-[#A8F8FF] shadow-lg shadow-gray-400 border border-gray-400">
-        
-      </div>
-    </div>
-  )
+    )
 }
