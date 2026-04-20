@@ -1,20 +1,47 @@
-import { HashRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom"
+import { useEffect } from "react"
 import Home from "./Pages/Home"
 import Nav from "./Components/Nav"
+import Footer from "./Components/Footer"
+import Service from "./Pages/Service"
+import About from "./Pages/About"
+import OrderPc from "./Pages/OrderPc"
+import Products from "./Pages/Products"
+import News from "./Pages/News"
+import PcIndustry from "./Pages/PcIndustry"
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
-
   return (
-    <div className="w-full h-auto py-[1%] px-[2%] bg-gray-100">
-      <HashRouter>
-      <Nav />
+    <HashRouter>
+      <ScrollToTop />
+
+      <div className="w-full pb-[1%] h-auto bg-gray-100">
+        <Nav />
+
         <Routes>
-          <Route path="/" element={<Home />}/>
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/order-pc" element={<OrderPc />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/pc-industry" element={<PcIndustry />} />
         </Routes>
-      </HashRouter>
-    </div>
-  )
+
+        <Footer />
+      </div>
+    </HashRouter>
+  );
 }
-export default App
+
+export default App;

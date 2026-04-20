@@ -4,5 +4,13 @@
 *{
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
+  scroll-behavior: smooth;
 }
 
+.source{
+  font-family:'Courier New', Courier, monospace;
+}
+
+.text-shadow-xl{
+  text-shadow: 20px 20px 15px black;
+}
