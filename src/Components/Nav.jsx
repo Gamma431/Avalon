@@ -18,7 +18,7 @@
         </div>
         <div className="w-[30%] h-full flex items-center justify-end">
           <div className="w-[50%] h-full flex items-center justify-evenly ">
-            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="w-full h-[50%] bg-gray-900 rounded-full text-white shadow-lg shadow-gray-700">Login</motion.button>
+            <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="w-full h-[50%] bg-gray-900 rounded-full text-white shadow-lg shadow-gray-700"><Link className="w-full h-full" to="/login">Login</Link></motion.button>
 
 
 

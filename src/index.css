@@ -10,7 +10,12 @@
 .source{
   font-family:'Courier New', Courier, monospace;
 }
-
+.bg-def{
+  background-color: #9deac6;
+}
+.text-def{
+  color: #9deac6;
+}
 .text-shadow-xl{
   text-shadow: 20px 20px 15px black;
 }

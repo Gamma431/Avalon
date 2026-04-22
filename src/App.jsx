@@ -9,6 +9,8 @@ import OrderPc from "./Pages/OrderPc"
 import Products from "./Pages/Products"
 import News from "./Pages/News"
 import PcIndustry from "./Pages/PcIndustry"
+import LoginPg from "./Pages/LoginPg"
+import RegisterPg from "./Pages/RegisterPg"
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,6 +38,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/news" element={<News />} />
           <Route path="/pc-industry" element={<PcIndustry />} />
+          <Route path="/login" element={<LoginPg />} />
+          <Route path="/register" element={<RegisterPg />} />
         </Routes>
 
         <Footer />
