@@ -30,7 +30,7 @@ export default function SideBar({
       </button>
 
           <div className="w-full h-[15vh] flex items-center justify-center ">
-            <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="w-full h-[50%] bg-gray-900 rounded-full text-white shadow-lg shadow-gray-700"><Link className="w-full h-full text-[30px]" to="/login" onClick={() => setIsSidebarOpen(false)}>Login</Link></motion.button>          
+            <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} className="w-full h-[50%] bg-gray-900 rounded-full text-white shadow-lg shadow-gray-700"><Link className="w-full h-full text-[30px]" to="/authentication" onClick={() => setIsSidebarOpen(false)}>Login</Link></motion.button>
           </div>
           <div className="w-full h-[40%] flex flex-col items-center justify-evenly">
           <Link to="/" className="bg-gray-300 w-full text-center rounded-lg text-[25px] text-shadow-lg text-shadow-gray-500 hover:shadow-2xl shadow-black hover:scale-[1.05] ease-in-out duration-100" onClick={() => setIsSidebarOpen(false)}>Home</Link>

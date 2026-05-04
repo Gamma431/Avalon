@@ -10,9 +10,9 @@ import OrderPc from "./Pages/OrderPc"
 import Products from "./Pages/Products"
 import News from "./Pages/News"
 import PcIndustry from "./Pages/PcIndustry"
-import LoginPg from "./Pages/LoginPg"
-import RegisterPg from "./Pages/RegisterPg"
+import Auth from "./Pages/Auth.jsx"
 import SideBar from "./Components/SideBar"
+import AuthProvider from "./context/AuthContext.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -20,7 +20,6 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
-
   return null
 }
 
@@ -28,32 +27,33 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
-    <HashRouter>
-      <ScrollToTop />
+    <AuthProvider>
+      <HashRouter>
+        <ScrollToTop />
 
-      <div className="w-full pb-[1%] h-auto bg-gray-100">
-        <Nav setIsSidebarOpen={setIsSidebarOpen} />
+        <div className="w-full pb-[1%] h-auto bg-gray-100">
+          <Nav setIsSidebarOpen={setIsSidebarOpen} />
 
-        <SideBar
-          isOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
-        />
+          <SideBar
+              isOpen={isSidebarOpen}
+              setIsSidebarOpen={setIsSidebarOpen}
+          />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/order-pc" element={<OrderPc />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/pc-industry" element={<PcIndustry />} />
-          <Route path="/login" element={<LoginPg />} />
-          <Route path="/register" element={<RegisterPg />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/order-pc" element={<OrderPc />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/pc-industry" element={<PcIndustry />} />
+            <Route path="/authentication" element={<Auth />} />
+          </Routes>
 
-        <Footer />
-      </div>
-    </HashRouter>
+          <Footer />
+        </div>
+      </HashRouter>
+    </AuthProvider>
   )
 }
 

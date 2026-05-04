@@ -19,3 +19,29 @@
 .text-shadow-xl{
   text-shadow: 20px 20px 15px black;
 }
+
+
+
+
+
+
+
+
+/* Media */
+
+
+@media screen and (max-width:1440px) {
+  .hero-head{
+    font-size: 90px;
+  }
+  .homecard{
+    font-size: 15px ;
+  }
+  .nvColection{
+    font-size: 70px;
+  }
+  .homecarousel{
+    font-size: 18px ;
+    
+  }
+}
